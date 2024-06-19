@@ -1,113 +1,95 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
-}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
-
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
+@inproceedings{wang2023spatio,
+  title={Spatio-Temporal Attention Network for Persistent Monitoring of Multiple Mobile Targets},
+  author={Wang, Yizhuo and Wang, Yutong and Cao, Yuhong and Sartoretti, Guillaume},
+  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={3903--3910},
+  year={2023},
+  organization={IEEE},
+  abstract={This work focuses on the persistent monitoring problem, where a set of targets moving based on an unknown model must be monitored by an autonomous mobile robot with a limited sensing range. To keep each target's position estimate as accurate as possible, the robot needs to adaptively plan its path to (re-)visit all the targets and update its belief from measurements collected along the way. In doing so, the main challenge is to strike a balance between exploitation, i.e., re-visiting previously-located targets, and exploration, i.e., finding new targets or re-acquiring lost ones. Encouraged by recent advances in deep reinforcement learning, we introduce an attention-based neural solution to the persistent monitoring problem, where the agent can learn the inter-dependencies between targets, i.e., their spatial and temporal correlations, conditioned on past measurements. This endows the agent with the ability to determine which target, time, and location to attend to across multiple scales, which we show also helps relax the usual limitations of a finite target set. We experimentally demonstrate that our method outperforms other baselines in terms of number of targets visits and average estimation error in complex environments. Finally, we implement and validate our model in a drone-based simulation experiment to monitor mobile ground targets in a high-fidelity simulator.},
+  abbr={IROS'23},
+  pdf={https://arxiv.org/pdf/2303.06350},
+  html={https://ieeexplore.ieee.org/document/10341674},
+  code={https://github.com/marmotlab/STAMP},
+  preview={stamp_preview.gif},
   selected={true}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+
+@inproceedings{cao2022catnipp,
+  title={CAtNIPP: Context-Aware Attention-based Network for Informative Path Planning},
+  author={Cao, Yuhong and Wang, Yizhuo and Vashisth, Apoorva and Fan, Haolin and Sartoretti, Guillaume Adrien},
+  booktitle={Conference on Robot Learning},
+  pages={1928--1937},
+  year={2022},
+  organization={PMLR},
+  abstract={Informative path planning (IPP) is an NP-hard problem, which aims at planning a path allowing an agent to build an accurate belief about a quantity of interest throughout a given search domain, within constraints on resource budget (e.g., path length for robots with limited battery life). IPP requires frequent online replanning as this belief is updated with every new measurement (i.e., adaptive IPP), while balancing short-term exploitation and longer-term exploration to avoid suboptimal, myopic behaviors. Encouraged by the recent developments in deep reinforcement learning, we introduce CAtNIPP, a fully reactive, neural approach to the adaptive IPP problem. CAtNIPP relies on self-attention for its powerful ability to capture dependencies in data at multiple spatial scales. Specifically, our agent learns to form a context of its belief over the entire domain, which it uses to sequence local movement decisions that optimize short- and longer-term search objectives. We experimentally demonstrate that CAtNIPP significantly outperforms state-of-the-art non-learning IPP solvers in terms of solution quality and computing time once trained, and present experimental results on hardware.},
+  abbr={CoRL'22},
+  pdf={https://openreview.net/pdf?id=cAIIbdNAeNa},
+  html={https://openreview.net/forum?id=cAIIbdNAeNa},
+  code={https://github.com/marmotlab/CAtNIPP},
+  preview={catnipp_sim_preview.gif},
+  selected={true}
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@article{wang2023full,
+  title={Full Communication Memory Networks for Team-Level Cooperation Learning},
+  author={Wang, Yutong and Wang, Yizhuo and Sartoretti, Guillaume},
+  journal={Autonomous Agents and Multi-Agent Systems},
+  volume={37},
+  number={2},
+  pages={33},
+  year={2023},
+  publisher={Springer},
+  abstract={Communication in multi-agent systems is a key driver of team-level cooperation, for instance allowing individual agents to augment their knowledge about the world in partially-observable environments. In this paper, we propose two reinforcement learning-based multi-agent models, namely FCMNet and FCMTran. The two models both allow agents to simultaneously learn a differentiable communication mechanism that connects all agents as well as a common, cooperative policy conditioned upon received information. FCMNet utilizes multiple directional Long Short-Term Memory chains to sequentially transmit and encode the current observation-based messages sent by every other agent at each timestep. FCMTran further relies on the encoder of a modified transformer to simultaneously aggregate multiple self-generated messages sent by all agents at the previous timestep into a single message that is used in the current timestep. Results from evaluating our models on a challenging set of StarCraft II micromanagement tasks with shared rewards show that FCMNet and FCMTran both outperform recent communication-based methods and value decomposition methods in almost all tested StarCraft II micromanagement tasks. We further improve the performance of our models by combining them with value decomposition techniques; there, in particular, we show that FCMTran with value decomposition significantly pushes the state-of-the-art on one of the hardest benchmark tasks without any task-specific tuning. We also investigate the robustness of FCMNet under communication disturbances (i.e., binarized messages, random message loss, and random communication order) in an asymmetric collaborative pathfinding task with individual rewards, demonstrating FMCNet’s potential applicability in real-world robotic tasks.},
+  abbr={J-AAMAS},
+  pdf={https://assets-eu.researchsquare.com/files/rs-2563058/v1_covered_5f11203c-27d3-4d75-8398-59fc4575fa38.pdf?c=1697495290},
+  html={https://link.springer.com/article/10.1007/s10458-023-09617-6},
+  code={https://github.com/marmotlab/FCMNet},
+  preview={smac_preview.gif},
+  selected={true}
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@inproceedings{wang2023learning,
+  title={Learning Simultaneous Motion Planning and Active Gaze Control for Persistent Monitoring of Dynamic Targets},
+  author={Wang, Yizhuo and Sartoretti, Guillaume},
+  year={2023},
+  booktitle={ICRA 2023 Workshop on Active Methods in Autonomous Navigation},
+  abstract={We consider the persistent monitoring problem of a given set of targets moving based on an unknown model by an autonomous mobile robot equipped with a directional sensor (e.g., camera). The robot needs to actively plan both its path and its sensor's gaze/heading direction to detect and constantly re-locate all targets by collecting measurements along its path, to keep the estimated position of each target as accurate as possible at all times. Our recent work discretize the monitoring domain into a graph where the deep-reinforcement-learning-based agent sequentially decide which neighboring node to visit next. In this work, we extend it by duplicating neighboring features multiple times and then combining with its unique gaze features to output a joint decision of ``where to go" and ``where to look". Our simulation experiments show that active gaze control enhances monitoring performance, particularly in terms of minimum number of re-observation per target, compared to agent with a fixed forward-gaze sensor or greedy gaze selection.},
+  abbr={ICRA'23 Workshop},
+  pdf={https://robotics.pme.duth.gr/workshop_active2/wp-content/uploads/2023/05/11.-Motion_gaze_control.pdf},
+  preview={gazectrl_preview.png},
+  selected={true}
 }
 
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
+
+@inproceedings{cao2023ariadne,
+  title={ARiADNE: A Reinforcement learning approach using Attention-based Deep Networks for Exploration},
+  author={Cao, Yuhong and Hou, Tianxiang and Wang, Yizhuo and Yi, Xian and Sartoretti, Guillaume},
+  booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={10219--10225},
+  year={2023},
+  organization={IEEE},
+  abstract={In autonomous robot exploration tasks, a mobile robot needs to actively explore and map an unknown environment as fast as possible. Since the environment is being revealed during exploration, the robot needs to frequently re-plan its path online, as new information is acquired by onboard sensors and used to update its partial map. While state-of-the-art exploration planners are frontier- and sampling-based, encouraged by the recent development in deep reinforcement learning (DRL), we propose ARiADNE, an attention-based neural approach to obtain real-time, non-myopic path planning for autonomous exploration. ARiADNE is able to learn dependencies at multiple spatial scales between areas of the agent's partial map, and implicitly predict potential gains associated with exploring those areas. This allows the agent to sequence movement actions that balance the natural trade-off between exploitation/refinement of the map in known areas and exploration of new areas. We experimentally demonstrate that our method outperforms both learning and non-learning state-of-the-art baselines in terms of average trajectory length to complete exploration in hundreds of simplified 2D indoor scenarios. We further validate our approach in high-fidelity Robot Operating System (ROS) simulations, where we consider a real sensor model and a realistic low-level motion controller, toward deployment on real robots.},
+  abbr={ICRA'23},
+  pdf={https://arxiv.org/pdf/2301.11575},
+  html={https://ieeexplore.ieee.org/document/10160565/},
+  code={https://github.com/marmotlab/ARiADNE},
+  preview={ariadne_preview.gif}
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+
+@article{cao2024deep,
+  title={Deep Reinforcement Learning-based Large-scale Robot Exploration},
+  author={Cao, Yuhong and Zhao, Rui and Wang, Yizhuo and Xiang, Bairan and Sartoretti, Guillaume},
+  journal={IEEE Robotics and Automation Letters},
+  year={2024},
+  publisher={IEEE},
+  abstract={},
+  abbr={RA-L},
+  pdf={https://arxiv.org/pdf/2403.10833},
+  html={https://ieeexplore.ieee.org/document/10476684},
+  preview={largeexplore_preveiw.gif}
 }

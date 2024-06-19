@@ -689,7 +689,8 @@ footer.sticky-bottom {
 
         abbr {
           display: inline-block;
-          background-color: var(--global-theme-color);
+          @include color-gradient;
+          background-color: color-gradient;
           margin-bottom: 0.5rem;
 
           a {
