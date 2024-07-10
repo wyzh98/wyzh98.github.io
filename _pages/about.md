@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. student at <a href='https://www.nus.edu.sg/'>National University of Singapore</a>.
+subtitle: Ph.D. candidate at <a href='https://www.nus.edu.sg/'>National University of Singapore</a>.
 
 profile:
   align: right
@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am currently a Ph.D. student at the <a href='https://cde.nus.edu.sg/me/'>National University of Singapore (NUS)</a>.
+I am currently a Ph.D. candidate at the <a href='https://cde.nus.edu.sg/me/'>National University of Singapore (NUS)</a>.
 I research in the <a href='https://marmotlab.org/'>Multi-Agent Robotic Motion (MARMot) Laboratory</a> advised by Asst. Prof. <a href='https://cde.nus.edu.sg/me/staff/sartoretti-guillaume-a/'>Guillaume Sartoretti</a>.
 Before this, I obtained my Master of Science degree from NUS and a B.Eng degree in Mechatronics from the <a href='http://en.hit.edu.cn/'>Harbin Institute of Technology (HIT)</a>.
 
