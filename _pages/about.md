@@ -23,4 +23,4 @@ I research in the <a href='https://marmotlab.org/'>Multi-Agent Robotic Motion (M
 Before this, I obtained my Master of Science degree from NUS and a B.Eng degree in Mechatronics from the <a href='http://en.hit.edu.cn/'>Harbin Institute of Technology (HIT)</a>.
 
 My primary research interests lie in the areas of robot learning, coordinated path planning, and multi-agent reinforcement learning.
-In the long term, I aim to enhance the quality, scalability, and generalizability of decision-making in multi-agent systems, to accelerate our progress toward a future world increasingly populated with intelligent agents.
+In the long term, I aim to enhance the quality and scalability of decision-making in multi-agent systems, to accelerate our progress toward a future world increasingly populated with intelligent agents.
