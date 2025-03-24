@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://yizhuo-wang.com/sitemap.xml
+Sitemap: https://wyzh98.github.io//sitemap.xml
