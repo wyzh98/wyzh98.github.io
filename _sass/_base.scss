@@ -195,6 +195,11 @@ ul.task-list input[type="checkbox"] {
 .profile {
   width: 100%;
 
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -402,6 +407,9 @@ ul.task-list input[type="checkbox"] {
 
   .contact-icons {
     font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 
     a {
       img {
@@ -411,18 +419,18 @@ ul.task-list input[type="checkbox"] {
       }
 
       svg {
-        width: 3.5rem;
-        height: 4rem;
-        margin-bottom: 0.5rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-bottom: 1rem;
 
         image {
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 3.2rem;
+          height: 3.2rem;
         }
       }
 
       i::before {
-        color: var(--global-text-color);
+        color: var(--global-theme-color);
         transition-property: all 0.2s ease-in-out;
       }
 
@@ -430,7 +438,7 @@ ul.task-list input[type="checkbox"] {
         text-decoration: none;
 
         i::before {
-          color: var(--global-theme-color);
+          color: var(--global-hover-color);
         }
       }
     }
@@ -740,6 +748,12 @@ footer.sticky-bottom {
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
           color: var(--global-card-bg-color) !important;
+          
+          // gradient background
+          // display: inline-block;
+          // @include color-gradient;
+          // background-color: color-gradient;
+          // margin-bottom: 0.5rem;
 
           a {
             color: white;
@@ -1340,7 +1354,7 @@ ninja-keys::part(ninja-input-wrapper) {
 
 // highlight-search-term
 ::highlight(search) {
-  background-color: var(--global-theme-color);
+  background-color: var(--global-hover-color);
   color: var(--global-text-color);
 }
 
