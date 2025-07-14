@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/assets/pdf/YizhuoCV.pdf";
           },
+        },{id: "nav-cv-中",
+          title: "CV(中)",
+          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/assets/pdf/YizhuoCV_CN.pdf";
+          },
         },{id: "news-i-create-my-personal-website",
           title: 'I create my personal website.🎉',
           description: "",
