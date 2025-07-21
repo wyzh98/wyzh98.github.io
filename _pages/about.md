@@ -29,7 +29,11 @@ latest_posts:
 
 I am currently a Ph.D. student at the <a href='https://cde.nus.edu.sg/me/'>National University of Singapore (NUS)</a>.
 I research in the <a href='https://marmotlab.org/'>Multi-Agent Robotic Motion (MARMot) Laboratory</a> advised by Asst. Prof. <a href='https://cde.nus.edu.sg/me/staff/sartoretti-guillaume-a/'>Guillaume Sartoretti</a>.
-Before this, I obtained my Master of Science degree from NUS and a B.Eng degree in Mechatronics from the <a href='http://en.hit.edu.cn/'>Harbin Institute of Technology (HIT)</a>.
+Before this, I obtained my Master of Science degree from NUS and a B.Eng degree in Mechatronics from <a href='http://en.hit.edu.cn/'>Harbin Institute of Technology (HIT)</a>.
 
 My primary research interests lie in the areas of robot learning, coordinated path planning, and multi-agent reinforcement learning.
 In the long term, I aim to enhance the quality and scalability of decision-making in multi-agent systems, to accelerate our progress toward a future world increasingly populated with intelligent agents.
+
+<p style="color: red;">
+  <strong>🔍Notice:</strong> I am actively seeking full-time opportunities starting in Fall 2026. Feel free to drop me a message at <code>wy98 (at) u.nus.edu</code> if you are interested.
+</p>
