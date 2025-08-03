@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CogniPlan: Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction">
+  <meta name="keywords" content="Path Planning under Uncertainty, Map Prediction, Graph Attention, Generative Models, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CogniPlan</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito" type='text/css'>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="./static/css/index.css"> -->
+  <link rel="icon" href="https://example.com/path/to/favicon.ico">
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body"  style="padding-bottom: 0;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">CogniPlan: Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction</h1>
+          <!-- <h2 class="title" style="font-size: large; color: grey;"></h2> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yizhuo-wang.com/">Yizhuo Wang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://hehaodong2004.github.io/">Haodong He</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jingsongliang.com/">Jingsong Liang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.yuhongcao.online/">Yuhong Cao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://in.linkedin.com/in/ritabrata-chakraborty-a63268251/">Ritabrata Chakraborty</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cde.nus.edu.sg/me/staff/sartoretti-guillaume-a/">Guillaume Sartoretti</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
+            <span class="author-block"><sup>1</sup>National University of Singapore</span>
+            <span class="author-block"><sup>2</sup>Tongji University</span>
+            <span class="author-block"><sup>3</sup>BITS Pilani</span>
+          </div>
+
+          <div class="is-size-5">
+            <p>
+              <b>
+                Conference on Robot Learning (CoRL) 2025
+              </b>
+            </p>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/TODO.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/marmotlab/CogniPlan"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser" style="padding-top: 0;">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1%;">
+      <div class="custom-grey-box">
+        <img src="teasing.webp" alt="teaser figure" style="width: 100%; max-width: 100%;" />
+      </div>
+    </div>
+
+    <div class="container is-max-desktop has-text-centered">
+    <div class="custom-grey-box">
+      <h2 class="title is-2" style="color: #CB297B;"> TL;DR </h2>
+      <div class="columns">
+        <div class="column">
+          <div class="content has-text-justified">
+            <p class="is-size-5">
+              <strong>CogniPlan</strong> is a path planning framework that leverages the synergy between 
+              <b>conditional generative layout prediction</b> and <b>graph-attention-based planning</b> 
+              to enable uncertainty-aware, efficient <b>exploration and navigation</b> in unknown environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <div class="custom-box">
+      <h2 class="title is-2">Abstract</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="content has-text-justified">
+            <p class="is-size-6">
+                Path planning in unknown environments is a crucial yet inherently challenging capability for mobile robots, 
+                which primarily encompasses two coupled tasks: <b>autonomous exploration</b> and <b>point-goal navigation</b>.
+                In both cases, the robot must perceive the environment, update its belief, 
+                and accurately estimate potential information gain on-the-fly to guide planning.
+                In this work, we propose <strong>CogniPlan</strong>, a novel path planning framework that leverages multiple plausible layouts 
+                predicted by a <strong><u>co</u>nditional <span style="text-decoration: underline; text-underline-offset: 4px;">g</span>e<u>n</u>erative <u>i</u>npainting</strong> model, 
+                mirroring how humans rely on <strong>cognitive maps</strong> during navigation.
+                These predictions, based on the partially observed map and a set of layout conditioning vectors, 
+                enable our planner to reason effectively under uncertainty.
+                We demonstrate strong synergy between generative image-based layout prediction 
+                and graph-attention-based path planning, allowing CogniPlan to combine 
+                the scalability of graph representations with the fidelity and predictiveness of occupancy maps, 
+                yielding notable performance gains in both exploration and navigation.
+                We extensively evaluate CogniPlan on two datasets (hundreds of maps and realistic floor plans), 
+                consistently outperforming state-of-the-art planners.
+                We further deploy it in a high-fidelity simulator and on hardware, 
+                showcasing its high-quality path planning and real-world applicability.
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Generative Layout Prediction + Graph Attention Planning</h2>
+    <div class="columns">
+      <div class="column">
+        <div class="content has-text-justified">
+          <p>
+            We first train a <b>generative inpainting</b> network on procedurally-generated maps, 
+            given their ground-truth layout type vector (room, tunnel, or outdoor), 
+            and then freeze the model to train a graph-attention-based planner network. 
+            Our planner reasons over <b>multiple predictions</b> generated from a set of <b>layout conditioning vectors</b> 
+            by incorporating probabilistic information into the <b>graph feature</b>, 
+            and iteratively outputs the next waypoint for exploration or navigation.
+          </p>
+          
+        <!-- <div class="custom-grey-box"> -->
+          <h3>CogniPlan Framework</h3>
+
+          <img src="diagram.webp" style="width: 100%;" alt="CogniPlan framework">
+        <!-- </div> -->
+
+        <!-- <div class="custom-blue-box">
+          <h3>Q-chunking</h3>
+
+          <img src="qc.svg" style="width: 100%;" alt="RLPD equations">
+        </div> -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- INTERACTIVE DEMO BEGIN -->
+
+<style>
+/* style */
+* {
+  font-family: 'Nunito', sans-serif;
+}
+.section-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0rem 0;
+}
+.section-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem; /* spacing */
+}
+.box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 0;
+}
+/* left */
+.triangle-box {
+  flex: 3.3;
+  padding: 1rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+/* mid */
+.result-box {
+  flex: 3;
+  padding: 1rem;
+  text-align: center;
+}
+/* right */
+.side-box {
+  flex: 1.58;
+  padding: 1rem;
+}
+svg, img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+svg text {
+  font-family: 'Nunito', sans-serif;
+}
+.container-relative { position: relative; }
+.overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.weights {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #333;
+}
+.caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+}
+</style>
+
+<section class="section-container">
+  <h2 class="title is-4">Conditional Generative Inpainting</h2>
+  <div class="content has-text-justified">
+    <p class="is-size-6">
+      Here is an <b>interactive demo</b> of our conditional generative inpainting model.  
+      You can drag the <strong>magenta dot</strong> around to adjust the layout conditioning vector z.  
+      Here, we confine z to a <b>soft one-hot</b> vector that follows a probability distribution.
+    </p>
+  </div>
+
+  <div class="custom-purple-box">
+
+    <div class="section-flex">
+      <!-- triangle selector -->
+      <div class="box triangle-box">
+        <svg id="barycentric-triangle" viewBox="0 0 300 270">
+          <polygon points="150,10 10,250 290,250" fill="#f9f9f9" stroke="#ccc" stroke-width="3"/>
+          <circle id="picker" cx="150" cy="170" r="10" fill="#a82297" stroke="#fff" stroke-width="2" cursor="pointer" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.3))"/>
+          <text x="150" y="10" text-anchor="middle" font-size="14" font-weight="600" fill="#444">Room</text>
+          <text x="10"  y="265" text-anchor="start" font-size="14" font-weight="600" fill="#444">Tunnel</text>
+          <text x="290" y="265" text-anchor="end" font-size="14" font-weight="600" fill="#444">Outdoor</text>
+        </svg>
+        <div id="weights-display" class="weights">Cond Vector z = [0.35, 0.35, 0.30]</div>
+      </div>
+
+      <!-- gen layout -->
+      <div class="box result-box">
+        <img id="layout-output" src="./inpaintings/0.35_0.35_0.30.png" alt="Predicted layout"/>
+        <div class="caption">Layout Prediction</div>
+      </div>
+
+      <!-- belief and ground-truth -->
+      <div class="box side-box">
+        <div class="container-relative">
+          <img src="./belief.png" alt="Belief Map"/>
+          <div class="overlay">Belief</div>
+        </div>
+        <div class="container-relative" style="margin-top:1rem;">
+          <img src="./gt.png" alt="Ground-Truth"/>
+          <div class="overlay">Ground-Truth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const svg      = document.getElementById('barycentric-triangle');
+  const picker   = document.getElementById('picker');
+  const output   = document.getElementById('layout-output');
+  const display  = document.getElementById('weights-display');
+  const A = { x:150, y:10 }, B = { x:10, y:250 }, C = { x:290, y:250 };
+  let dragging = false;
+  picker.addEventListener('pointerdown', () => dragging = true);
+  document.addEventListener('pointerup',   () => dragging = false);
+  document.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY;
+    const loc = pt.matrixTransform(svg.getScreenCTM().inverse());
+    const denom = (B.y - C.y)*(A.x - C.x) + (C.x - B.x)*(A.y - C.y);
+    let w1 = ((B.y - C.y)*(loc.x - C.x) + (C.x - B.x)*(loc.y - C.y)) / denom;
+    let w2 = ((C.y - A.y)*(loc.x - C.x) + (A.x - C.x)*(loc.y - C.y)) / denom;
+    let w3 = 1 - w1 - w2;
+    if (w1<0&&w2>=0&&w3>=0){w1=0;[w2,w3]=[w2/(w2+w3),w3/(w2+w3)];}
+    else if (w2<0&&w1>=0&&w3>=0){w2=0;[w1,w3]=[w1/(w1+w3),w3/(w1+w3)];}
+    else if (w3<0&&w1>=0&&w2>=0){w3=0;[w1,w2]=[w1/(w1+w2),w2/(w1+w2)];}
+    else if (w1<0&&w2<0){w1=0;w2=0;w3=1;} else if (w1<0&&w3<0){w1=0;w2=1;w3=0;}
+    else if (w2<0&&w3<0){w1=1;w2=0;w3=0;}
+    const px=w1*A.x+w2*B.x+w3*C.x, py=w1*A.y+w2*B.y+w3*C.y;
+    picker.setAttribute('cx',px); picker.setAttribute('cy',py);
+    const q=v=>Math.round(v*20)/20;
+    let qw1=q(w1), qw2=q(w2), qw3=q(1-qw1-qw2);
+    const fmt=v=>v.toFixed(2);
+    display.textContent=`Cond Vector z = [${fmt(qw1)}, ${fmt(qw2)}, ${fmt(qw3)}]`;
+    output.src=`./inpaintings/${fmt(qw1)}_${fmt(qw2)}_${fmt(qw3)}.png`;
+  });
+});
+</script>
+
+<!-- INTERACTIVE DEMO END -->
+
+<section class="section">
+  <div class="container is-max-desktop ">
+    <h2 class="title is-3">Results</h2>
+
+      <div class="custom-grey-box" style="margin-bottom:2rem;">
+        <div class="columns">
+          <div class="column is-half has-text-centered">
+            <img src="exploration_length.webp" style="width:100%;"/>
+          <p class="is-size-5"><b>Exploration Benchmark</b></p>
+          </div>
+          <div class="column is-half has-text-centered">
+            <img src="navigation_length.webp" style="width:100%;"/>
+            <p class="is-size-5"><b>Navigation Benchmark</b></p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-half has-text-centered">
+            <img src="expcurve.webp" style="width:100%;"/>
+            <p class="is-size-5"><b>Zero-shot Generalization to KTH Floor Plan</b></p>
+          </div>
+          <div class="column is-half has-text-centered">
+            <img src="robustness.webp" style="width:100%;"/>
+            <p class="is-size-5"><b>Robustness to Random Start Positions</b></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-green-box" style="margin-bottom:2rem;">
+        <div class="content">
+          <div class="has-text-centered" style="margin-bottom:1rem;">
+            <video controls style="width:100%;">
+              <source src="demo-explore.mp4" type="video/mp4">
+            </video>
+            <p class="is-size-5"><b>Exploration Demo</b></p>
+          </div>
+          <div class="has-text-centered">
+            <video controls style="width:60%;">
+              <source src="demo-nav.mp4" type="video/mp4">
+            </video>
+            <p class="is-size-5"><b>Navigation Demo</b></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-green-box" style="margin-bottom:0rem;">
+        <div class="has-text-centered">
+          <img src="gazebo.webp" alt="Gazebo Scene" style="width:100%;"/>
+          <p class="is-size-5"><b>Validation in Gazebo Environments</b></p>
+        </div>
+      </div>
+
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <h2 class="title">BibTeX</h2>
+    <pre>
+<code>@inproceedings{wang2025cogniplan,
+  author={Wang, Yizhuo and He, Haodong and Liang, Jingsong and Cao, Yuhong and Chakraborty, Ritabrata and Sartoretti, Guillaume},
+  title={CogniPlan: Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction},
+  booktitle={Conference on Robot Learning},
+  year={2025},
+  organization={PMLR}
+}</code></pre></div>
+</section>
+
+<footer class="footer">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>
+            and <a href="https://colinqiyangli.github.io/qc/">QC</a>
+            under a 
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
