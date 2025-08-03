@@ -1,0 +1,106 @@
+.custom-blue-box {
+    border: 1px solid rgba(243 244 246);   /* Border color */
+    padding: 40px;                /* Padding inside the box */
+    background-color: #0076ba10;   /* Light grey background */
+    border-radius: 40px;          /* Rounded corners */
+    outline: none;                /* Remove outline */
+    padding-bottom: 40px; 
+    margin: 10px 5px 10px 5px;
+}
+.custom-blue2-box {
+    border: 1px solid rgba(243 244 246);   /* Border color */
+    padding: 40px;                /* Padding inside the box */
+    background-color: #0076ba10;   /* Light grey background */
+    border-radius: 40px;          /* Rounded corners */
+    outline: none;                /* Remove outline */
+    padding-bottom: 0px; 
+    margin: 10px 5px 10px 5px;
+}
+.custom-purple-box {
+    border: 1px solid rgba(243 244 246);   /* Border color */
+    padding: 30px;                /* Padding inside the box */
+    background-color: #b81cb810;   /* Light grey background */
+    border-radius: 40px;          /* Rounded corners */
+    outline: none;                /* Remove outline */
+    padding-bottom: 0px; 
+    margin: 10px 5px 10px 5px;
+}
+.custom-green-box {
+    border: 1px solid rgba(243 244 246);   /* Border color */
+    padding: 40px;                /* Padding inside the box */
+    background-color: #06751310;   /* Light grey background */
+    border-radius: 40px;          /* Rounded corners */
+    outline: none;                /* Remove outline */
+    padding-bottom: 40px; 
+    margin: 10px 5px 10px 5px;
+}
+.custom-grey-box {
+    border: 1px solid rgba(243 244 246);   /* Border color */
+    padding: 40px;                /* Padding inside the box */
+    background-color: #a0a0a010;   /* Light grey background */
+    border-radius: 40px;          /* Rounded corners */
+    outline: none;                /* Remove outline */
+    padding-bottom: 40px; 
+    margin: 40px 5px 40px 5px;
+}
+
+.custom-title {
+    border-bottom: 1px solid #d3d3d3;  /* Border under the title */
+    padding-bottom: 10px;              /* Space below the title */
+    font-size: 1.5rem;                 /* Optional: Title size */
+    margin-top: 0;                     /* Remove the margin on top of the title */
+}
+
+/* Paper highlight class for easy application */
+.paper-highlight {
+    background-color: #ffffd0;  /* Light yellow background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove margin and padding for tables */
+table {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: "Nunito", sans-serif;
+}
+a {
+    font-family: "Nunito", sans-serif;
+}
+figcaption {
+	font-family: "Nunito", sans-serif;
+}
+h1 {
+    font-family: "Google Sans", sans-serif;
+}
+h2 {
+    font-family: "Nunito", sans-serif;
+}
+h3 {
+    font-family: "Nunito", sans-serif;
+}
+h4 {
+    font-family: "Nunito", sans-serif;
+}
+
+.publication-authors .author-block a {
+  font-family: "Google Sans", sans-serif;
+}
+.publication-authors .author-block {
+  font-family: "Google Sans", sans-serif;
+}
+
+b {
+    font-family: "Nunito", sans-serif;
+    color: #00369f;
+    /* color: #0076ba; */
+}
+
+strong {
+    font-family: "Nunito", sans-serif;
+    color: #a82297;
+    /* color: #CB297B; */
+}
