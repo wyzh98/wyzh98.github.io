@@ -17,8 +17,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito" type='text/css'>
   <link rel="stylesheet" href="styles.css">
-  <!-- <link rel="stylesheet" href="./static/css/index.css"> -->
-  <link rel="icon" href="https://example.com/path/to/favicon.ico">
+  <link rel="icon" href="favicon-cogniplan.png" type="image/png">
 </head>
 
 <body>
@@ -104,21 +103,22 @@
     </div>
 
     <div class="container is-max-desktop has-text-centered">
-    <div class="custom-grey-box">
-      <h2 class="title is-2" style="color: #CB297B;"> TL;DR </h2>
-      <div class="columns">
-        <div class="column">
-          <div class="content has-text-justified">
-            <p class="is-size-5">
-              <strong>CogniPlan</strong> is a path planning framework that leverages the synergy between 
-              <b>conditional generative layout prediction</b> and <b>graph-attention-based planning</b> 
-              to enable uncertainty-aware, efficient <b>exploration and navigation</b> in unknown environments.
-            </p>
+      <div class="custom-grey-box">
+        <h2 class="title is-2" style="color: #CB297B;"> TL;DR </h2>
+        <div class="columns">
+          <div class="column">
+            <div class="content has-text-justified">
+              <p class="is-size-5">
+                <strong>CogniPlan</strong> is a path planning framework that leverages the synergy between 
+                <b>conditional generative layout prediction</b> and <b>graph-attention-based planning</b> 
+                to enable uncertainty-aware, efficient <b>exploration and navigation</b> in unknown environments.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </section>
 
 <section class="section">
@@ -139,8 +139,8 @@
                 These predictions, based on the partially observed map and a set of layout conditioning vectors, 
                 enable our planner to reason effectively under uncertainty.
                 We demonstrate strong synergy between generative image-based layout prediction 
-                and graph-attention-based path planning, allowing CogniPlan to combine 
-                the scalability of graph representations with the fidelity and predictiveness of occupancy maps, 
+                and graph-attention-based path planning, allowing CogniPlan to 
+                <b>combine the scalability of graph representations with the fidelity and predictiveness of occupancy maps</b>, 
                 yielding notable performance gains in both exploration and navigation.
                 We extensively evaluate CogniPlan on two datasets (hundreds of maps and realistic floor plans), 
                 consistently outperforming state-of-the-art planners.
@@ -168,23 +168,13 @@
             by incorporating probabilistic information into the <b>graph feature</b>, 
             and iteratively outputs the next waypoint for exploration or navigation.
           </p>
-          
-        <!-- <div class="custom-grey-box"> -->
           <h3>CogniPlan Framework</h3>
-
           <img src="diagram.webp" style="width: 100%;" alt="CogniPlan framework">
-        <!-- </div> -->
-
-        <!-- <div class="custom-blue-box">
-          <h3>Q-chunking</h3>
-
-          <img src="qc.svg" style="width: 100%;" alt="RLPD equations">
-        </div> -->
-
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
 <!-- INTERACTIVE DEMO BEGIN -->
@@ -350,16 +340,16 @@ window.addEventListener('DOMContentLoaded', () => {
 <section class="section">
   <div class="container is-max-desktop ">
     <h2 class="title is-3">Results</h2>
-
       <div class="custom-grey-box" style="margin-bottom:2rem;">
+        <h3 class="title is-4">Benchmarks</h3>
         <div class="columns">
           <div class="column is-half has-text-centered">
             <img src="exploration_length.webp" style="width:100%;"/>
-          <p class="is-size-5"><b>Exploration Benchmark</b></p>
+          <p class="is-size-5"><b>Autonomous Exploration</b></p>
           </div>
           <div class="column is-half has-text-centered">
             <img src="navigation_length.webp" style="width:100%;"/>
-            <p class="is-size-5"><b>Navigation Benchmark</b></p>
+            <p class="is-size-5"><b>Point-Goal Navigation</b></p>
           </div>
         </div>
         <div class="columns">
@@ -374,30 +364,45 @@ window.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
 
-      <div class="custom-green-box" style="margin-bottom:2rem;">
-        <div class="content">
-          <div class="has-text-centered" style="margin-bottom:1rem;">
-            <video controls style="width:100%;">
-              <source src="demo-explore.mp4" type="video/mp4">
-            </video>
-            <p class="is-size-5"><b>Exploration Demo</b></p>
-          </div>
-          <div class="has-text-centered">
-            <video controls style="width:60%;">
-              <source src="demo-nav.mp4" type="video/mp4">
-            </video>
-            <p class="is-size-5"><b>Navigation Demo</b></p>
-          </div>
+      <div class="content">
+        <h3 class="title is-4">Demos in Simulated Maps</h3>
+        <div class="has-text-centered" style="margin-bottom:1rem;">
+          <video controls style="width:100%;">
+            <source src="demo-explore.mp4" type="video/mp4">
+          </video>
+          <p class="is-size-5"><b>Exploration</b></p>
+        </div>
+        <div class="has-text-centered">
+          <video controls style="width:60%;">
+            <source src="demo-nav.mp4" type="video/mp4">
+          </video>
+          <p class="is-size-5"><b>Navigation</b></p>
         </div>
       </div>
 
-      <div class="custom-green-box" style="margin-bottom:0rem;">
+      <div class="content">
+        <h3 class="title is-4">Validation in Gazebo Environments</h3>
         <div class="has-text-centered">
           <img src="gazebo.webp" alt="Gazebo Scene" style="width:100%;"/>
-          <p class="is-size-5"><b>Validation in Gazebo Environments</b></p>
+          <!-- <p class="is-size-5"><b>Validation in Gazebo Environments</b></p> -->
         </div>
       </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Related Links</h2>
+    <div class="content">
+      <p>
+        Some parts of this work are implemented based on <a href="https://github.com/marmotlab/large-scale-DRL-exploration">large-scale-DRL-exploration</a> 
+        and <a href="https://github.com/marmotlab/Context_Aware_Navigation">Context_Aware_Navigation</a>.<br>
+
+        The Gazebo experiments are conducted using the <a href="https://www.cmu-exploration.com/development-environment">CMU exploration environment</a>.<br>
+
+        Some excellent related works: <a href="https://www.cmu-exploration.com/tare-planner">TARE</a> and <a href="https://mapex-explorer.github.io/">MapEx</a>.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="BibTeX">
