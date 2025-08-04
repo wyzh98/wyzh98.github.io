@@ -68,7 +68,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/TODO.pdf"
+                <a href="CoRL_2025_CogniPlan.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -104,7 +104,7 @@
 
     <div class="container is-max-desktop has-text-centered">
       <div class="custom-grey-box">
-        <h2 class="title is-2" style="color: #CB297B;"> TL;DR </h2>
+        <h2 class="title is-2" style="color: #a82297;"> TL;DR </h2>
         <div class="columns">
           <div class="column">
             <div class="content has-text-justified">
@@ -256,13 +256,15 @@ svg text {
 </style>
 
 <section class="section-container">
-  <h2 class="title is-4">Conditional Generative Inpainting</h2>
-  <div class="content has-text-justified">
-    <p class="is-size-6">
-      Here is an <b>interactive demo</b> of our conditional generative inpainting model.  
-      You can drag the <strong>magenta dot</strong> around to adjust the layout conditioning vector z.  
-      Here, we confine z to a <b>soft one-hot</b> vector that follows a probability distribution.
-    </p>
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Conditional Generative Inpainting</h2>
+    <div class="content has-text-justified">
+      <p class="is-size-6">
+        Here is an <b>interactive demo</b> of our conditional generative inpainting model.  
+        You can drag the <strong>magenta dot</strong> around to adjust the layout conditioning vector z.  
+        Here, we confine z to a <b>soft one-hot</b> vector that follows a probability distribution.
+      </p>
+    </div>
   </div>
 
   <div class="custom-purple-box">
@@ -384,7 +386,6 @@ window.addEventListener('DOMContentLoaded', () => {
         <h3 class="title is-4">Validation in Gazebo Environments</h3>
         <div class="has-text-centered">
           <img src="gazebo.webp" alt="Gazebo Scene" style="width:100%;"/>
-          <!-- <p class="is-size-5"><b>Validation in Gazebo Environments</b></p> -->
         </div>
       </div>
 </section>
@@ -399,7 +400,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         The Gazebo experiments are conducted using the <a href="https://www.cmu-exploration.com/development-environment">CMU exploration environment</a>.<br>
 
-        Some excellent related works: <a href="https://www.cmu-exploration.com/tare-planner">TARE</a> and <a href="https://mapex-explorer.github.io/">MapEx</a>.
+        Some excellent related works: <a href="https://www.cmu-exploration.com/tare-planner">TARE</a>, <a href="https://mapex-explorer.github.io/">MapEx</a>, 
+        <a href="https://github.com/marmotlab/ARiADNE-ROS-Planner">ARiADNE</a>.
       </p>
     </div>
   </div>
