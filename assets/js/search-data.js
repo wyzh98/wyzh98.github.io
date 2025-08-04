@@ -42,6 +42,9 @@ ninja.data = [{
           section: "News",},{id: "news-my-co-authored-paper-on-multi-agent-exploration-under-directional-field-of-view-has-been-accepted-for-icra-25",
           title: 'My co-authored paper on multi-agent exploration under directional field of view has been...',
           description: "",
+          section: "News",},{id: "news-our-paper-cogniplan-which-rely-on-conditional-generative-inpainting-model-to-predict-plausible-layouts-for-uncertainty-aware-planning-has-been-accepted-to-corl-2025-see-you-in-seoul-korea-check-out-the-project-page-of-cogniplan",
+          title: 'Our paper CogniPlan, which rely on conditional generative inpainting model to predict plausible...',
+          description: "",
           section: "News",},{
         id: 'social-github',
         title: 'GitHub',
