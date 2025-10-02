@@ -45,6 +45,9 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-cogniplan-which-rely-on-conditional-generative-inpainting-model-to-predict-plausible-layouts-for-uncertainty-aware-planning-has-been-accepted-to-corl-2025-see-you-in-seoul-korea-check-out-the-project-page-of-cogniplan",
           title: 'Our paper CogniPlan, which rely on conditional generative inpainting model to predict plausible...',
           description: "",
+          section: "News",},{id: "news-my-co-authored-paper-on-multi-agent-multi-target-monitoring-has-been-accepted-to-mrs-2025-in-singapore-another-co-authored-work-on-expert-guided-large-scale-exploration-is-accepted-to-the-active-perception-workshop-at-iros-2025-in-hangzhou-china-excited-to-meet-many-friends-at-both-events",
+          title: 'My co-authored paper on multi-agent, multi-target monitoring has been accepted to MRS 2025...',
+          description: "",
           section: "News",},{
         id: 'social-github',
         title: 'GitHub',
