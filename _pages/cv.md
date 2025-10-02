@@ -4,7 +4,7 @@ permalink: /assets/pdf/YizhuoCV.pdf
 title: CV
 nav: true
 nav_order: 2
-cv_pdf: YizhuoCV.pdf # you can also use external links here
+cv_pdf: # you can also use external links here
 description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
 toc:
   sidebar: left

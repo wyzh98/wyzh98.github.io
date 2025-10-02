@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper [CogniPlan](https://arxiv.org/pdf/2508.03027), which rely on conditional generative inpainting model to predict plausible layouts for uncertainty-aware planning, has been accepted to [CoRL 2025](https://www.corl.org/)! See you in Seoul, Korea. Check out the [<u>project page of CogniPlan</u>](https://yizhuo-wang.com/cogniplan/)! 🧠
+Our paper [CogniPlan](https://openreview.net/pdf?id=uA9GZEmGiT), which rely on conditional generative inpainting model to predict plausible layouts for uncertainty-aware planning, has been accepted to [CoRL 2025](https://www.corl.org/)! See you in Seoul, Korea. Check out the [<u>project page of CogniPlan</u>](https://yizhuo-wang.com/cogniplan/)! 🧠
