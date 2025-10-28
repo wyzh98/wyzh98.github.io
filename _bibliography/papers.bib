@@ -1,17 +1,6 @@
 ---
 ---
 
-@inproceedings{cao2025learning,
-  title={Scalable and Expert-guided Reinforcement Learning-based Autonomous Robot Exploration},
-  author={Cao, Yuhong and Wang, Yizhuo and Liang, Jingsong and Sartoretti, Guillaume},
-  year={2025},
-  booktitle={IROS 2025 Active Perception Workshop},
-  abstract={This work further pushes the boundary of learning-based methods in autonomous robot exploration in terms of scalability and exploration efficiency. In particular, we focus on ground robot autonomous exploration with omnidirectional 3D-LiDAR. In this work, we present HEADER, an attention-based reinforcement learning approach with hierarchical graphs for efficient exploration in large-scale environments. HEADER follows existing conventional methods to construct hierarchical representations, but further designs a novel community-based algorithm to efficiently partition the dense local graph into the shape-adaptive global graph. Leveraging a guidepost design to incorporate the global reference path into local decisions, we further empower our attentionbased model to better capture dependencies during exploration to produce near-optimal exploration behaviors. While existing learning approaches all train models with handcrafted but biased rewards, we propose a parameter-free privileged reward that strictly aligns with the exploration objective. In the experiments, HEADER demonstrates better scalability than most existing learning and non-learning methods, while achieving significant improvement in exploration efficiency over the stateof-the-art baselines.},
-  abbr={IROS'25 Workshop},
-  preview={iros25workshop_preview.png},
-  selected={false}
-}
-
 @inproceedings{zhang2025compass,
   author={Zhang, Xingjian and Wang, Yizhuo and Sartoretti, Guillaume},
   title={COMPASS: Cooperative Multi-Agent Persistent Monitoring using Spatio-Temporal Attention Network},
@@ -40,6 +29,19 @@
   selected={true}
 }
 
+@inproceedings{cao2025learning,
+  title={Scalable and Expert-guided Reinforcement Learning-based Autonomous Robot Exploration},
+  author={Cao, Yuhong and Wang, Yizhuo and Liang, Jingsong and Sartoretti, Guillaume},
+  year={2025},
+  booktitle={IROS 2025 Active Perception Workshop},
+  abstract={This work further pushes the boundary of learning-based methods in autonomous robot exploration in terms of scalability and exploration efficiency. In particular, we focus on ground robot autonomous exploration with omnidirectional 3D-LiDAR. In this work, we present HEADER, an attention-based reinforcement learning approach with hierarchical graphs for efficient exploration in large-scale environments. HEADER follows existing conventional methods to construct hierarchical representations, but further designs a novel community-based algorithm to efficiently partition the dense local graph into the shape-adaptive global graph. Leveraging a guidepost design to incorporate the global reference path into local decisions, we further empower our attentionbased model to better capture dependencies during exploration to produce near-optimal exploration behaviors. While existing learning approaches all train models with handcrafted but biased rewards, we propose a parameter-free privileged reward that strictly aligns with the exploration objective. In the experiments, HEADER demonstrates better scalability than most existing learning and non-learning methods, while achieving significant improvement in exploration efficiency over the stateof-the-art baselines.},
+  abbr={IROS'25 Workshop},
+  pdf={https://activep-ws.github.io/accepted_papers/4_Scalable_and_Expert_guided_R.pdf},
+  award={Best Paper Award},
+  preview={iros25workshop_preview.png},
+  selected={true}
+}
+
 @inproceedings{wang2024viper,
   title={ViPER: Visibility-based Pursuit-Evasion via Reinforcement Learning},
   author={Wang, Yizhuo and Cao, Yuhong and Chiun, Jimmy and Koley, Subhadeep and Pham, Mandy and Sartoretti, Guillaume},
@@ -63,7 +65,7 @@
   year={2023},
   organization={IEEE},
   abstract={This work focuses on the persistent monitoring problem, where a set of targets moving based on an unknown model must be monitored by an autonomous mobile robot with a limited sensing range. To keep each target's position estimate as accurate as possible, the robot needs to adaptively plan its path to (re-)visit all the targets and update its belief from measurements collected along the way. In doing so, the main challenge is to strike a balance between exploitation, i.e., re-visiting previously-located targets, and exploration, i.e., finding new targets or re-acquiring lost ones. Encouraged by recent advances in deep reinforcement learning, we introduce an attention-based neural solution to the persistent monitoring problem, where the agent can learn the inter-dependencies between targets, i.e., their spatial and temporal correlations, conditioned on past measurements. This endows the agent with the ability to determine which target, time, and location to attend to across multiple scales, which we show also helps relax the usual limitations of a finite target set. We experimentally demonstrate that our method outperforms other baselines in terms of number of targets visits and average estimation error in complex environments. Finally, we implement and validate our model in a drone-based simulation experiment to monitor mobile ground targets in a high-fidelity simulator.},
-  abbr={IROS'23},
+  abbr={IROS 2023},
   pdf={https://arxiv.org/pdf/2303.06350},
   code={https://github.com/marmotlab/STAMP},
   preview={stamp_airsim_preview.gif},
