@@ -1,18 +1,6 @@
 ---
 ---
 
-@inproceedings{zhang2025compass,
-  author={Zhang, Xingjian and Wang, Yizhuo and Sartoretti, Guillaume},
-  title={COMPASS: Cooperative Multi-Agent Persistent Monitoring using Spatio-Temporal Attention Network},
-  booktitle={IEEE International Symposium on Multi-Robot & Multi-Agent Systems},
-  year={2025},
-  abstract={Persistent monitoring of dynamic targets is essential in real-world applications such as disaster response, environmental sensing, and wildlife conservation, where mobile agents must continuously gather information under uncertainty. We propose COMPASS, a multi-agent reinforcement learning (MARL) framework that enables decentralized agents to persistently monitor multiple moving targets efficiently. We model the environment as a graph, where nodes represent spatial locations and edges capture topological proximity, allowing agents to reason over structured layouts and revisit informative regions as needed. Each agent independently selects actions based on a shared spatio-temporal attention network that we design to integrate historical observations and spatial context. We model target dynamics using Gaussian Processes (GPs), which support principled belief updates and enable uncertainty-aware planning. We train COMPASS using centralized value estimation and decentralized policy execution under an adaptive reward setting. Our extensive experiments demonstrate that COMPASS consistently outperforms strong baselines in uncertainty reduction, target coverage, and coordination efficiency across dynamic multi-target scenarios.},
-  abbr={MRS 2025},
-  pdf={https://arxiv.org/pdf/2507.16306},
-  preview={compass_preview.png},
-  selected={false}
-}
-
 @inproceedings{wang2025cogniplan,
   author={Wang, Yizhuo and He, Haodong and Liang, Jingsong and Cao, Yuhong and Chakraborty, Ritabrata and Sartoretti, Guillaume},
   title={CogniPlan: Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction},
@@ -29,18 +17,6 @@
   selected={true}
 }
 
-@inproceedings{cao2025learning,
-  title={Scalable and Expert-guided Reinforcement Learning-based Autonomous Robot Exploration},
-  author={Cao, Yuhong and Wang, Yizhuo and Liang, Jingsong and Sartoretti, Guillaume},
-  year={2025},
-  booktitle={IROS 2025 Active Perception Workshop},
-  abstract={This work further pushes the boundary of learning-based methods in autonomous robot exploration in terms of scalability and exploration efficiency. In particular, we focus on ground robot autonomous exploration with omnidirectional 3D-LiDAR. In this work, we present HEADER, an attention-based reinforcement learning approach with hierarchical graphs for efficient exploration in large-scale environments. HEADER follows existing conventional methods to construct hierarchical representations, but further designs a novel community-based algorithm to efficiently partition the dense local graph into the shape-adaptive global graph. Leveraging a guidepost design to incorporate the global reference path into local decisions, we further empower our attentionbased model to better capture dependencies during exploration to produce near-optimal exploration behaviors. While existing learning approaches all train models with handcrafted but biased rewards, we propose a parameter-free privileged reward that strictly aligns with the exploration objective. In the experiments, HEADER demonstrates better scalability than most existing learning and non-learning methods, while achieving significant improvement in exploration efficiency over the stateof-the-art baselines.},
-  abbr={IROS'25 Workshop},
-  pdf={https://activep-ws.github.io/accepted_papers/4_Scalable_and_Expert_guided_R.pdf},
-  award={Best Paper Award},
-  preview={iros25workshop_preview.png},
-  selected={true}
-}
 
 @inproceedings{wang2024viper,
   title={ViPER: Visibility-based Pursuit-Evasion via Reinforcement Learning},
@@ -72,6 +48,43 @@
   selected={true}
 }
 
+@inproceedings{wang2023learning,
+  title={Learning Simultaneous Motion Planning and Active Gaze Control for Persistent Monitoring of Dynamic Targets},
+  author={Wang, Yizhuo and Sartoretti, Guillaume},
+  year={2023},
+  booktitle={ICRA 2023 Workshop on Active Methods in Autonomous Navigation},
+  abstract={We consider the persistent monitoring problem of a given set of targets moving based on an unknown model by an autonomous mobile robot equipped with a directional sensor (e.g., camera). The robot needs to actively plan both its path and its sensor's gaze/heading direction to detect and constantly re-locate all targets by collecting measurements along its path, to keep the estimated position of each target as accurate as possible at all times. Our recent work discretize the monitoring domain into a graph where the deep-reinforcement-learning-based agent sequentially decide which neighboring node to visit next. In this work, we extend it by duplicating neighboring features multiple times and then combining with its unique gaze features to output a joint decision of ``where to go" and ``where to look". Our simulation experiments show that active gaze control enhances monitoring performance, particularly in terms of minimum number of re-observation per target, compared to agent with a fixed forward-gaze sensor or greedy gaze selection.},
+  abbr={ICRA'23 Workshop},
+  pdf={https://robotics.pme.duth.gr/workshop_active2/wp-content/uploads/2023/05/11.-Motion_gaze_control.pdf},
+  preview={gazectrl_preview.png},
+  selected={true}
+}
+
+@inproceedings{zhang2025compass,
+  author={Zhang, Xingjian and Wang, Yizhuo and Sartoretti, Guillaume},
+  title={COMPASS: Cooperative Multi-Agent Persistent Monitoring using Spatio-Temporal Attention Network},
+  booktitle={IEEE International Symposium on Multi-Robot & Multi-Agent Systems},
+  year={2025},
+  abstract={Persistent monitoring of dynamic targets is essential in real-world applications such as disaster response, environmental sensing, and wildlife conservation, where mobile agents must continuously gather information under uncertainty. We propose COMPASS, a multi-agent reinforcement learning (MARL) framework that enables decentralized agents to persistently monitor multiple moving targets efficiently. We model the environment as a graph, where nodes represent spatial locations and edges capture topological proximity, allowing agents to reason over structured layouts and revisit informative regions as needed. Each agent independently selects actions based on a shared spatio-temporal attention network that we design to integrate historical observations and spatial context. We model target dynamics using Gaussian Processes (GPs), which support principled belief updates and enable uncertainty-aware planning. We train COMPASS using centralized value estimation and decentralized policy execution under an adaptive reward setting. Our extensive experiments demonstrate that COMPASS consistently outperforms strong baselines in uncertainty reduction, target coverage, and coordination efficiency across dynamic multi-target scenarios.},
+  abbr={MRS 2025},
+  pdf={https://arxiv.org/pdf/2507.16306},
+  award={Best Paper Award},
+  preview={compass_preview.png},
+  selected={true}
+}
+
+@inproceedings{cao2025learning,
+  title={Scalable and Expert-guided Reinforcement Learning-based Autonomous Robot Exploration},
+  author={Cao, Yuhong and Wang, Yizhuo and Liang, Jingsong and Sartoretti, Guillaume},
+  year={2025},
+  booktitle={IROS 2025 Active Perception Workshop},
+  abstract={This work further pushes the boundary of learning-based methods in autonomous robot exploration in terms of scalability and exploration efficiency. In particular, we focus on ground robot autonomous exploration with omnidirectional 3D-LiDAR. In this work, we present HEADER, an attention-based reinforcement learning approach with hierarchical graphs for efficient exploration in large-scale environments. HEADER follows existing conventional methods to construct hierarchical representations, but further designs a novel community-based algorithm to efficiently partition the dense local graph into the shape-adaptive global graph. Leveraging a guidepost design to incorporate the global reference path into local decisions, we further empower our attentionbased model to better capture dependencies during exploration to produce near-optimal exploration behaviors. While existing learning approaches all train models with handcrafted but biased rewards, we propose a parameter-free privileged reward that strictly aligns with the exploration objective. In the experiments, HEADER demonstrates better scalability than most existing learning and non-learning methods, while achieving significant improvement in exploration efficiency over the stateof-the-art baselines.},
+  abbr={IROS'25 Workshop},
+  pdf={https://activep-ws.github.io/accepted_papers/4_Scalable_and_Expert_guided_R.pdf},
+  award={Best Paper Award},
+  preview={iros25workshop_preview.png},
+  selected={true}
+}
 
 @inproceedings{cao2022catnipp,
   title={CAtNIPP: Context-Aware Attention-based Network for Informative Path Planning},
@@ -105,17 +118,6 @@
   selected={true}
 }
 
-@inproceedings{wang2023learning,
-  title={Learning Simultaneous Motion Planning and Active Gaze Control for Persistent Monitoring of Dynamic Targets},
-  author={Wang, Yizhuo and Sartoretti, Guillaume},
-  year={2023},
-  booktitle={ICRA 2023 Workshop on Active Methods in Autonomous Navigation},
-  abstract={We consider the persistent monitoring problem of a given set of targets moving based on an unknown model by an autonomous mobile robot equipped with a directional sensor (e.g., camera). The robot needs to actively plan both its path and its sensor's gaze/heading direction to detect and constantly re-locate all targets by collecting measurements along its path, to keep the estimated position of each target as accurate as possible at all times. Our recent work discretize the monitoring domain into a graph where the deep-reinforcement-learning-based agent sequentially decide which neighboring node to visit next. In this work, we extend it by duplicating neighboring features multiple times and then combining with its unique gaze features to output a joint decision of ``where to go" and ``where to look". Our simulation experiments show that active gaze control enhances monitoring performance, particularly in terms of minimum number of re-observation per target, compared to agent with a fixed forward-gaze sensor or greedy gaze selection.},
-  abbr={ICRA'23 Workshop},
-  pdf={https://robotics.pme.duth.gr/workshop_active2/wp-content/uploads/2023/05/11.-Motion_gaze_control.pdf},
-  preview={gazectrl_preview.png},
-  selected={true}
-}
 
 @inproceedings{chiun2025marvel,
   title={MARVEL: Multi-Agent Reinforcement Learning for constrained field-of-View multi-robot Exploration in Large-scale environments},
