@@ -5,4 +5,6 @@ inline: true
 related_posts: false
 ---
 
-I'm excited to share that the two papers from my last update, our IEEE MRS 2025 and IROS 2025 Workshop papers, <span style="color:red; font-weight:bold">both won the Best Paper Award!</span>🏆🎉 In MRS, we introduce [COMPASS](https://arxiv.org/pdf/2507.16306), a multi-agent extension of [STAMP](https://github.com/marmotlab/STAMP).
+I'm thrilled to share updates on the two papers from my last post:\\
+🏆 Our IROS 2025 Workshop paper won the **<span style="color:red">Best Paper Award</span>**;\\
+🏅 Our IEEE MRS 2025 paper was selected as a **<span style="color:red">Best Paper Award Finalist</span>**, where we introduced [COMPASS](https://arxiv.org/pdf/2507.16306), a multi-agent extension of [STAMP](https://github.com/marmotlab/STAMP).
