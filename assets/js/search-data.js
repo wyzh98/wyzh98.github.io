@@ -48,8 +48,8 @@ ninja.data = [{
           section: "News",},{id: "news-my-co-authored-paper-on-multi-agent-multi-target-monitoring-has-been-accepted-to-mrs-2025-in-singapore-another-co-authored-work-on-expert-guided-large-scale-exploration-is-accepted-to-the-active-perception-workshop-at-iros-2025-in-hangzhou-china-excited-to-meet-many-friends-at-both-events",
           title: 'My co-authored paper on multi-agent, multi-target monitoring has been accepted to MRS 2025...',
           description: "",
-          section: "News",},{id: "news-i-m-excited-to-share-that-the-two-papers-from-my-last-update-our-ieee-mrs-2025-and-iros-2025-workshop-papers-both-won-the-best-paper-award-in-mrs-we-introduce-compass-a-multi-agent-extension-of-stamp",
-          title: 'I’m excited to share that the two papers from my last update, our...',
+          section: "News",},{id: "news-i-m-thrilled-to-share-updates-on-the-two-papers-from-my-last-post-our-iros-2025-workshop-paper-won-the-best-paper-award-our-ieee-mrs-2025-paper-was-selected-as-a-best-paper-award-finalist-where-we-introduced-compass-a-multi-agent-extension-of-stamp",
+          title: 'I’m thrilled to share updates on the two papers from my last post:...',
           description: "",
           section: "News",},{
         id: 'social-github',
