@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I create my personal website.🎉
+I create my personal website. 🎉
