@@ -54,8 +54,11 @@ ninja.data = [{
           section: "News",},{id: "news-i-successfully-defended-my-ph-d",
           title: 'I successfully defended my Ph.D.! 🎓',
           description: "",
-          section: "News",},{id: "news-my-co-authored-paper-on-multi-agent-cooperative-navigation-has-been-accepted-by-ra-l",
-          title: 'My co-authored paper on multi-agent cooperative navigation has been accepted by RA-L.',
+          section: "News",},{id: "news-my-co-authored-paper-on-multi-agent-cooperative-navigation-using-option-critic-learning-has-been-accepted-to-ra-l",
+          title: 'My co-authored paper on multi-agent cooperative navigation using option-critic learning has been accepted...',
+          description: "",
+          section: "News",},{id: "news-my-co-authored-paper-imaginav-on-scalable-embodied-navigation-using-video-world-model-has-been-accepted-to-iros-2026",
+          title: 'My co-authored paper ImagiNav on scalable embodied navigation using video world model has...',
           description: "",
           section: "News",},{
         id: 'social-github',
