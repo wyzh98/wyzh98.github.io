@@ -17,7 +17,6 @@
   selected={true}
 }
 
-
 @inproceedings{wang2024viper,
   title={ViPER: Visibility-based Pursuit-Evasion via Reinforcement Learning},
   author={Wang, Yizhuo and Cao, Yuhong and Chiun, Jimmy and Koley, Subhadeep and Pham, Mandy and Sartoretti, Guillaume},
@@ -29,7 +28,7 @@
   abbr={CoRL 2024},
   pdf={https://openreview.net/pdf?id=EPujQZWemk},
   code={https://github.com/marmotlab/ViPER},
-  preview={viper_preview.gif},
+  preview={viper_preview.webp},
   selected={true}
 }
 
@@ -48,18 +47,6 @@
   selected={true}
 }
 
-@inproceedings{wang2023learning,
-  title={Learning Simultaneous Motion Planning and Active Gaze Control for Persistent Monitoring of Dynamic Targets},
-  author={Wang, Yizhuo and Sartoretti, Guillaume},
-  year={2023},
-  booktitle={ICRA 2023 Workshop on Active Methods in Autonomous Navigation},
-  abstract={We consider the persistent monitoring problem of a given set of targets moving based on an unknown model by an autonomous mobile robot equipped with a directional sensor (e.g., camera). The robot needs to actively plan both its path and its sensor's gaze/heading direction to detect and constantly re-locate all targets by collecting measurements along its path, to keep the estimated position of each target as accurate as possible at all times. Our recent work discretize the monitoring domain into a graph where the deep-reinforcement-learning-based agent sequentially decide which neighboring node to visit next. In this work, we extend it by duplicating neighboring features multiple times and then combining with its unique gaze features to output a joint decision of ``where to go" and ``where to look". Our simulation experiments show that active gaze control enhances monitoring performance, particularly in terms of minimum number of re-observation per target, compared to agent with a fixed forward-gaze sensor or greedy gaze selection.},
-  abbr={ICRA'23 Workshop},
-  pdf={https://robotics.pme.duth.gr/workshop_active2/wp-content/uploads/2023/05/11.-Motion_gaze_control.pdf},
-  preview={gazectrl_preview.png},
-  selected={true}
-}
-
 @inproceedings{zhang2025compass,
   author={Zhang, Xingjian and Wang, Yizhuo and Sartoretti, Guillaume},
   title={COMPASS: Cooperative Multi-Agent Persistent Monitoring using Spatio-Temporal Attention Network},
@@ -73,6 +60,19 @@
   selected={true}
 }
 
+@inproceedings{chen2026imaginav,
+  author={Chen, Jie and Cai, Yuxin and Wang, Yizhuo and Bai, Ruofei and Cao, Yuhong and Li, Jun and Yun, Yau Wei and Sartoretti, Guillaume},
+  title={ImagiNav: Scalable Embodied Navigation via Generative Visual Prediction and Inverse Dynamics},
+  booktitle={2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2026},
+  organization={IEEE},
+  abstract={Enabling robots to navigate open-world environments via natural language is critical for general-purpose autonomy. Yet, Vision-Language Navigation has relied on end-to-end policies trained on expensive, embodiment-specific robot data. While recent foundation models trained on vast simulation data show promise, the challenge of scaling and generalizing due to the limited scene diversity and visual fidelity in simulation persists. To address this gap, we propose ImagiNav, a novel modular paradigm that decouples visual planning from robot actuation, enabling the direct utilization of diverse in-the-wild navigation videos. Our framework operates as a hierarchy: a Vision-Language Model first decomposes instructions into textual subgoals; a finetuned generative video model then imagines the future video trajectory towards that subgoal; finally, an inverse dynamics model extracts the trajectory from the imagined video, which can then be tracked via a low-level controller. We additionally develop a scalable data pipeline of in-the-wild navigation videos auto-labeled via inverse dynamics and a pretrained Vision-Language Model. ImagiNav demonstrates strong zero-shot transfer to robot navigation without requiring robot demonstrations, paving the way for generalist robots that learn navigation directly from unlabeled, open-world data.},
+  abbr={IROS 2026},
+  pdf={https://arxiv.org/pdf/2603.13833},
+  preview={imaginav_preview.webp},
+  selected={true}
+}
+
 @inproceedings{cao2025learning,
   title={Scalable and Expert-guided Reinforcement Learning-based Autonomous Robot Exploration},
   author={Cao, Yuhong and Wang, Yizhuo and Liang, Jingsong and Sartoretti, Guillaume},
@@ -83,6 +83,19 @@
   pdf={https://activep-ws.github.io/accepted_papers/4_Scalable_and_Expert_guided_R.pdf},
   award={Best Paper Award},
   preview={iros25workshop_preview.png},
+  selected={true}
+}
+
+@article{cao2024deep,
+  title={Deep Reinforcement Learning-based Large-scale Robot Exploration},
+  author={Cao, Yuhong and Zhao, Rui and Wang, Yizhuo and Xiang, Bairan and Sartoretti, Guillaume},
+  journal={IEEE Robotics and Automation Letters},
+  year={2024},
+  publisher={IEEE},
+  abstract={In this work, we propose a deep reinforcement learning (DRL) based reactive planner to solve large-scale Lidar-based autonomous robot exploration problems in 2D action space. Our DRL-based planner allows the agent to reactively plan its exploration path by making implicit predictions about unknown areas, based on a learned estimation of the underlying transition model of the environment. To this end, our approach relies on learned attention mechanisms for their powerful ability to capture long-term dependencies at different spatial scales to reason about the robot's entire belief over known areas. Our approach relies on ground truth information (i.e., privileged learning) to guide the environment estimation during training, as well as on a graph rarefaction algorithm, which allows models trained in small-scale environments to scale to large-scale ones. Simulation results show that our model exhibits better exploration efficiency (12% in path length, 6%in makespan) and lower planning time (60%) than the state-ofthe-art planners in a 130m x 100m benchmark scenario. We also validate our learned model on hardware.},
+  abbr={RA-L 2024},
+  pdf={https://arxiv.org/pdf/2403.10833},
+  preview={largeexplore_preview.webp},
   selected={true}
 }
 
@@ -101,6 +114,18 @@
   selected={true}
 }
 
+@inproceedings{wang2023learning,
+  title={Learning Simultaneous Motion Planning and Active Gaze Control for Persistent Monitoring of Dynamic Targets},
+  author={Wang, Yizhuo and Sartoretti, Guillaume},
+  year={2023},
+  booktitle={ICRA 2023 Workshop on Active Methods in Autonomous Navigation},
+  abstract={We consider the persistent monitoring problem of a given set of targets moving based on an unknown model by an autonomous mobile robot equipped with a directional sensor (e.g., camera). The robot needs to actively plan both its path and its sensor's gaze/heading direction to detect and constantly re-locate all targets by collecting measurements along its path, to keep the estimated position of each target as accurate as possible at all times. Our recent work discretize the monitoring domain into a graph where the deep-reinforcement-learning-based agent sequentially decide which neighboring node to visit next. In this work, we extend it by duplicating neighboring features multiple times and then combining with its unique gaze features to output a joint decision of ``where to go" and ``where to look". Our simulation experiments show that active gaze control enhances monitoring performance, particularly in terms of minimum number of re-observation per target, compared to agent with a fixed forward-gaze sensor or greedy gaze selection.},
+  abbr={ICRA'23 Workshop},
+  pdf={https://robotics.pme.duth.gr/workshop_active2/wp-content/uploads/2023/05/11.-Motion_gaze_control.pdf},
+  preview={gazectrl_preview.png},
+  selected={true}
+}
+
 @article{wang2023full,
   title={Full Communication Memory Networks for Team-Level Cooperation Learning},
   author={Wang, Yutong and Wang, Yizhuo and Sartoretti, Guillaume},
@@ -114,10 +139,23 @@
   abbr={J-AAMAS 2023},
   pdf={https://assets-eu.researchsquare.com/files/rs-2563058/v1_covered_5f11203c-27d3-4d75-8398-59fc4575fa38.pdf?c=1697495290},
   code={https://github.com/marmotlab/FCMNet},
-  preview={smac_preview.gif},
+  preview={smac_preview.webp},
   selected={true}
 }
 
+
+@article{zhang2026orion,
+  title={ORION: Option-Regularized Deep Reinforcement Learning for Cooperative Multi-Agent Online Navigation},
+  author={Zhang, Shizhe and Liang, Jingsong and Zhou, Zhitao and Ye, Shuhan and Wang, Yizhuo and Tan, Derek Ming Siang and Chiun, Jimmy and Cao, Yuhong and Sartoretti, Guillaume},
+  journal={IEEE Robotics and Automation Letters},
+  year={2026},
+  publisher={IEEE},
+  abstract={Existing methods for multi-agent navigation typically assume fully known environments, offering limited support for partially known scenarios with outdated or imperfect prior maps, such as warehouses or factory floors. There, agents need to balance path optimality with collecting and sharing environmental information to help teammates reach their own targets. To these ends, we propose ORION, a novel deep reinforcement learning framework for cooperative multi-agent online navigation in partially known environments. Starting from an imperfect prior map, ORION trains agents to make decentralized decisions, coordinate toward individual targets, and actively reduce task-relevant map uncertainty through online observation sharing in a closed perception–action loop. We first design a shared graph encoder that fuses prior map with online perception into a unified representation, providing robust state embeddings under environmental discrepancies. At the core of ORION is an option-critic framework that learns high-level cooperative modes translated into sequences of low-level actions, enabling adaptive switching between individual navigation and team-level exploration. We further introduce a dual-stage cooperation strategy that allows agents to assist teammates under map uncertainty, thereby reducing the overall makespan. Across extensive maze-like maps and large-scale warehouse environments, ORION achieves high-quality real-time decentralized cooperation while scaling to up to 10 robots, outperforming state-of-the-art classical and learning-based baselines. Finally, we validate ORION on physical robot teams, demonstrating its robustness and practicality for real-world cooperative navigation.},
+  abbr={RA-L 2026},
+  pdf={https://arxiv.org/pdf/2601.01155},
+  code={https://github.com/marmotlab/ORION},
+  preview={orion_preview.gif}
+}
 
 @inproceedings{chiun2025marvel,
   title={MARVEL: Multi-Agent Reinforcement Learning for constrained field-of-View multi-robot Exploration in Large-scale environments},
@@ -146,15 +184,3 @@
   preview={ariadne_preview.gif}
 }
 
-
-@article{cao2024deep,
-  title={Deep Reinforcement Learning-based Large-scale Robot Exploration},
-  author={Cao, Yuhong and Zhao, Rui and Wang, Yizhuo and Xiang, Bairan and Sartoretti, Guillaume},
-  journal={IEEE Robotics and Automation Letters},
-  year={2024},
-  publisher={IEEE},
-  abstract={In this work, we propose a deep reinforcement learning (DRL) based reactive planner to solve large-scale Lidar-based autonomous robot exploration problems in 2D action space. Our DRL-based planner allows the agent to reactively plan its exploration path by making implicit predictions about unknown areas, based on a learned estimation of the underlying transition model of the environment. To this end, our approach relies on learned attention mechanisms for their powerful ability to capture long-term dependencies at different spatial scales to reason about the robot's entire belief over known areas. Our approach relies on ground truth information (i.e., privileged learning) to guide the environment estimation during training, as well as on a graph rarefaction algorithm, which allows models trained in small-scale environments to scale to large-scale ones. Simulation results show that our model exhibits better exploration efficiency (12% in path length, 6%in makespan) and lower planning time (60%) than the state-ofthe-art planners in a 130m x 100m benchmark scenario. We also validate our learned model on hardware.},
-  abbr={RA-L 2024},
-  pdf={https://arxiv.org/pdf/2403.10833},
-  preview={largeexplore_preview.gif}
-}

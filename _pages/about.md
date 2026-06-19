@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. candidate at National University of Singapore.
+subtitle: Ph.D., National University of Singapore
 
 profile:
   align: right
@@ -34,6 +34,8 @@ Before this, I obtained my Master of Science degree from NUS and a B.Eng degree 
 My primary research interests lie in the areas of robot learning, coordinated path planning, and multi-agent reinforcement learning.
 In the long term, I aim to enhance the quality and scalability of decision-making in multi-agent systems, to accelerate our progress toward a future world increasingly populated with intelligent agents.
 
+<!--
 <p style="color: red;">
   <strong>🔍Notice:</strong> I am actively seeking full-time opportunities starting in Fall 2026. Feel free to drop me a message at <code>wy98 (at) u.nus.edu</code> if you are interested.
 </p>
+-->
