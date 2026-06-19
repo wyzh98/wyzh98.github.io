@@ -55,7 +55,7 @@
   abstract={Persistent monitoring of dynamic targets is essential in real-world applications such as disaster response, environmental sensing, and wildlife conservation, where mobile agents must continuously gather information under uncertainty. We propose COMPASS, a multi-agent reinforcement learning (MARL) framework that enables decentralized agents to persistently monitor multiple moving targets efficiently. We model the environment as a graph, where nodes represent spatial locations and edges capture topological proximity, allowing agents to reason over structured layouts and revisit informative regions as needed. Each agent independently selects actions based on a shared spatio-temporal attention network that we design to integrate historical observations and spatial context. We model target dynamics using Gaussian Processes (GPs), which support principled belief updates and enable uncertainty-aware planning. We train COMPASS using centralized value estimation and decentralized policy execution under an adaptive reward setting. Our extensive experiments demonstrate that COMPASS consistently outperforms strong baselines in uncertainty reduction, target coverage, and coordination efficiency across dynamic multi-target scenarios.},
   abbr={MRS 2025},
   pdf={https://arxiv.org/pdf/2507.16306},
-  award={Best Paper Award},
+  award={Best Paper Award Finalist},
   preview={compass_preview.png},
   selected={true}
 }
@@ -95,6 +95,7 @@
   abstract={In this work, we propose a deep reinforcement learning (DRL) based reactive planner to solve large-scale Lidar-based autonomous robot exploration problems in 2D action space. Our DRL-based planner allows the agent to reactively plan its exploration path by making implicit predictions about unknown areas, based on a learned estimation of the underlying transition model of the environment. To this end, our approach relies on learned attention mechanisms for their powerful ability to capture long-term dependencies at different spatial scales to reason about the robot's entire belief over known areas. Our approach relies on ground truth information (i.e., privileged learning) to guide the environment estimation during training, as well as on a graph rarefaction algorithm, which allows models trained in small-scale environments to scale to large-scale ones. Simulation results show that our model exhibits better exploration efficiency (12% in path length, 6%in makespan) and lower planning time (60%) than the state-ofthe-art planners in a 130m x 100m benchmark scenario. We also validate our learned model on hardware.},
   abbr={RA-L 2024},
   pdf={https://arxiv.org/pdf/2403.10833},
+  code={https://github.com/marmotlab/large-scale-DRL-exploration},
   preview={largeexplore_preview.webp},
   selected={true}
 }
